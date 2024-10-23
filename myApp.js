@@ -5,7 +5,7 @@ const ninetyDaysInSeconds = 90*24*60*60;
 
 app.use(helmet({
 	hidePoweredBy()
-	frameguard({ action: 'deny' })
+	frameguard: { action: 'deny' }
 	xssFilter()
 	noSniff()
 	ieNoOpen()
