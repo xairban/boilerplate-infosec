@@ -7,14 +7,12 @@ app.use(helmet({
 	frameguard: { action: 'deny' },
 	contentSecurityPolicy: {
 		directives: {
-		default: ["'self'"],
+		defaultSrc: ["'self'"],
 		scriptSrc: ["'self'", 'trusted-cdn.com']
 		}
 	},
 	dnsPrefetchControl: false
 }))
-
-
 
 
 
