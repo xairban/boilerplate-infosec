@@ -7,7 +7,7 @@ app.use(helmet({
 	frameguard: { action: 'deny' },
 	contentSecurityPolicy: {
 		directives: {
-		default: ["'self'"]
+		default: ["'self'"],
 		scriptSrc: ["'self'", 'trusted-cdn.com']
 		}
 	},
