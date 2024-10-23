@@ -4,20 +4,20 @@ const helmet = require('helmet');
 const ninetyDaysInSeconds = 90*24*60*60;
 
 app.use(helmet({
-	hidePoweredBy(),
-	frameguard({ action: 'deny' }),
-	xssFilter(),
-	noSniff(),
-	ieNoOpen(),
-	hsts({maxAge: nenetyDaysInSeconds, force:true}),
-	dnsPrefetchControl(),
-	noCache(),
+	hidePoweredBy()
+	frameguard({ action: 'deny' })
+	xssFilter()
+	noSniff()
+	ieNoOpen()
+	hsts({maxAge: nenetyDaysInSeconds, force:true})
+	dnsPrefetchControl()
+	noCache()
 	contentSecurityPolicy({
 		directives: {
-		default: ["'self'"],
-		scriptSrc: ["'self'", 'trusted-cdn.com'],
-		},
-	}),
+		default: ["'self'"]
+		scriptSrc: ["'self'", 'trusted-cdn.com']
+		}
+	})
 }))
 
 
