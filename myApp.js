@@ -5,7 +5,7 @@ const ninetyDaysInSeconds = 90*24*60*60;
 
 app.use(helmet({
 	frameguard: { action: 'deny' },
-	contentSecurityPolicy {
+	contentSecurityPolicy: {
 		directives: {
 		default: ["'self'"]
 		scriptSrc: ["'self'", 'trusted-cdn.com']
